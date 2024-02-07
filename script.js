@@ -1,0 +1,11 @@
+const divSquares = document.querySelector('#squareDivs');
+let singleSquare = document.createElement('div');
+
+singleSquare.style.width = "100px";
+singleSquare.style.height = "100px";
+singleSquare.style.backgroundColor = "green";
+
+divSquares.appendChild(singleSquare);
+
+
+
