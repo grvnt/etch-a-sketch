@@ -1,15 +1,21 @@
+const containerWidth = 960;
+const gridSize = 16;
+
+const sqaureSize = containerWidth / gridSize;
+
 const divSquares = document.querySelector('.squareDivs');
-let singleSquare = document.createElement('div');
+divSquares.style.display = 'flex';
+divSquares.style.flexWrap = 'wrap';
+divSquares.style.width = `${containerWidth}px`;
 
-singleSquare.style.width = "100px";
-singleSquare.style.height = "100px";
-singleSquare.style.backgroundColor = "green";
-
-for (let i = 0; i < 16; i++) {
-    divSquares.appendChild(singleSquare.cloneNode(true));
+for (let i = 0; i < gridSize * gridSize; i++) {
+    let singleSquare = document.createElement('div');
+    singleSquare.style.width = `${sqaureSize}px`;
+    singleSquare.style.height = `${sqaureSize}px`;
+    singleSquare.style.backgroundColor = "teal";
+    
+    divSquares.appendChild(singleSquare);
 }
 
-let flexContainer = document.querySelector('div');
-flexContainer.style.display = 'flex';
-flexContainer.style.flexWrap = 'wrap';
+
 
