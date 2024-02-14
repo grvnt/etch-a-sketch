@@ -17,5 +17,16 @@ for (let i = 0; i < gridSize * gridSize; i++) {
     divSquares.appendChild(singleSquare);
 }
 
+//Create event listener that changes color of square on mouse hover
+
+const squares = document.querySelectorAll(singleSquare);
+function changeColor() {
+    this.style.backgroundColor = "orange";
+}
+
+squares.forEach(singleSquare => {
+    singleSquare.addEventListener('mouseover', changeColor);
+})
+
 
 
