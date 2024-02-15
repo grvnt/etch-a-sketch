@@ -26,7 +26,13 @@ document.querySelector('#start').addEventListener('click', function () {
         singleSquare.style.backgroundColor = "teal";
 
         singleSquare.addEventListener('mouseover', function() {
-            this.style.background = "orange";
+            
+            const r = Math.floor(Math.random() * 256);
+            const g = Math.floor(Math.random() * 256);
+            const b = Math.floor(Math.random() * 256);
+            
+            
+            this.style.background = `rgb(${r}, ${g}, ${b})`;
         });
         
         squareDivs.appendChild(singleSquare);
