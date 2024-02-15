@@ -1,5 +1,13 @@
+let gridSize;
+
+do {
+    gridSize = prompt("Enter a number less than 100");
+    gridSize = Number(gridSize);
+} while (gridSize > 100 || isNaN(gridSize) || gridSize <= 0);
+
+
+
 const containerWidth = 960;
-const gridSize = 16;
 
 const squareSize = containerWidth / gridSize;
 
