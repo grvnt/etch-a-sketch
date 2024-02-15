@@ -10,7 +10,7 @@ squareDivs.style.width = `${containerWidth}px`;
 
 for (let i = 0; i < gridSize * gridSize; i++) {
     let singleSquare = document.createElement('div');
-    singleSquare.classList.add('singleSquare'); //This was the problem
+    singleSquare.classList.add('singleSquare'); //Adding class solved the problem
     singleSquare.style.width = `${squareSize}px`;
     singleSquare.style.height = `${squareSize}px`;
     singleSquare.style.backgroundColor = "teal";
