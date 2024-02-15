@@ -1,32 +1,34 @@
 const containerWidth = 960;
 const gridSize = 16;
 
-const sqaureSize = containerWidth / gridSize;
+const squareSize = containerWidth / gridSize;
 
-const divSquares = document.querySelector('.squareDivs');
-divSquares.style.display = 'flex';
-divSquares.style.flexWrap = 'wrap';
-divSquares.style.width = `${containerWidth}px`;
+const squareDivs = document.querySelector('.squareDivs');
+squareDivs.style.display = 'flex';
+squareDivs.style.flexWrap = 'wrap';
+squareDivs.style.width = `${containerWidth}px`;
 
 for (let i = 0; i < gridSize * gridSize; i++) {
     let singleSquare = document.createElement('div');
-    singleSquare.style.width = `${sqaureSize}px`;
-    singleSquare.style.height = `${sqaureSize}px`;
+    singleSquare.classList.add('singleSquare'); //This was the problem
+    singleSquare.style.width = `${squareSize}px`;
+    singleSquare.style.height = `${squareSize}px`;
     singleSquare.style.backgroundColor = "teal";
     
-    divSquares.appendChild(singleSquare);
+    squareDivs.appendChild(singleSquare);
 }
 
-//Create event listener that changes color of square on mouse hover
+//Event listener that changes color of square on mouse hover
 
-const squares = document.querySelectorAll(singleSquare);
+const squares = document.querySelectorAll('.singleSquare');
+
 function changeColor() {
     this.style.backgroundColor = "orange";
 }
 
-squares.forEach(singleSquare => {
-    singleSquare.addEventListener('mouseover', changeColor);
-})
+squares.forEach(square => {
+    square.addEventListener('mouseover', changeColor);
+});
 
 
 
